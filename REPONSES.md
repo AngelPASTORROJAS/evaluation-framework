@@ -1,10 +1,61 @@
 ## QUESTIONS DE COURS /5 POINTS
 
-1. Quel composant vu en cours permet la gestion des routes avec React ?
-2. Quel hook permet de récupérer un paramètre passé dans l’url ?
-3. Quelle ligne de commande permet de créer un projet React ?
-4. Expliquez la notion de hook.
-5. React manipule-t-il directement le DOM de l’application ? expliquez...
+### 1. Quel composant vu en cours permet la gestion des routes avec React ?
+On doit installer le package:
+```bash
+npm i react-router-dom
+```
+
+On utilise les composants:
+```jsx
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Form from "./pages/Form";
+import Effect from "./pages/Effect";
+import NotFound from "./pages/NotFound";
+
+<BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Form />} />
+    <Route path="/effect/:decimal?" element={<Effect />} />
+    <Route path="/*" element={<NotFound />}/>
+    </Routes>
+</BrowserRouter>
+```
+
+### 2. Quel hook permet de récupérer un paramètre passé dans l’url ?
+Pour récupérer un paramètre dans l'url on peut utiliser le hook useParams, exemple:
+```jsx
+import { useParams } from "react-router-dom";
+
+const { id } = useParams();
+```
+
+
+### 3. Quelle ligne de commande permet de créer un projet React ?
+Celui vu en cours pour créer un project React avec Vite:
+```bash
+npm create vite
+#On choisi React
+#On choisi Javascript
+#On nomme le project et on suis les instruction pour installer le projet
+```
+
+### 4. Expliquez la notion de hook.
+Un hook est un fonction qui gère la gestion des fonctionalité d'un composant telle que celle vu e cours:
+```jsx
+//On a les hook d'état
+useState()
+useReducer()
+//Les hook de context
+useContext()
+//Les hook de Reférence
+useRef()
+//Les hoook avec un cycle de vie
+useEffect()
+```
+
+### 5. React manipule-t-il directement le DOM de l’application ? expliquez...
+
 
 ## QUESTIONS PRATIQUES /5 POINTS
 
