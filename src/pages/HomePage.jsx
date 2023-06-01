@@ -9,7 +9,7 @@ const HomePage = () => {
       {state.livres.map((livre) => (
         <article>
             <h2 style={{ margin: "10px", color: "red" }}>{livre.titre}</h2>
-            <p style={{ margin: "10px", color: "red" }}>Stock disponible : {livre.stock} </p>
+            <p style={{ margin: "10px", color: "red" }}>Stock {livre.stock>0?"":"in"}disponible </p>
         </article>
       ))}
     </>

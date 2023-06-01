@@ -9,6 +9,10 @@ const initialState = {
       titre: "Poule aux oeufs d'or",
       stock:3
     },
+    {
+      titre: "Le loup",
+      stock:0
+    }
   ],
   titre: "",
   stock: 0
