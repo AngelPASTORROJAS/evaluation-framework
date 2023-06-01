@@ -21,8 +21,10 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "incr":
+      const stock=state[action.index].stock-1
       return;
     case "decr":
+      const stock=state[action.index].stock+1
       return;
   }
 };
